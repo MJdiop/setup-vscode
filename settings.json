@@ -121,5 +121,17 @@
   "eslint.codeAction.showDocumentation": {
     "enable": true
   },
-  "explorer.confirmDragAndDrop": false
+  "explorer.confirmDragAndDrop": false,
+    "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Community Material Theme Ocean High Contrast",
+  "workbench.colorCustomizations": {
+    "editor.background": "#06080B",
+    "sideBar.background": "#06080B",
+  },
+  "editor.tokenColorCustomizations": {
+    // "numbers": "#2247EB",
+    // "comments": "#a1a6a7",
+    // "functions": "#0D7C28",
+    "strings": "#55efc4"
+  }
 }
