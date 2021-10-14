@@ -1,17 +1,23 @@
 {
-  "editor.fontSize": 19,
+  "editor.fontSize": 21,
   "files.autoSave": "off",
-  "window.zoomLevel": 0,
   "editor.formatOnSave": true,
   "[javascript]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "files.associations": {
+    "*.blade.php": "html",
+    "*.tpl": "html"
+  },
   "window.menuBarVisibility": "toggle",
   "debug.node.autoAttach": "on",
   // "php.validate.executablePath": "/opt/lampp/bin/php-7.1.28",
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  // "editor.fontFamily": "'Fira code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  // "editor.fontLigatures": true,
   "editor.tabSize": 2,
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
@@ -38,7 +44,6 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.iconTheme": "vscode-icons",
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -117,21 +122,30 @@
   "workbench.sideBar.location": "left",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.colorTheme": "Community Material Theme Ocean High Contrast",
   "eslint.codeAction.showDocumentation": {
     "enable": true
   },
   "explorer.confirmDragAndDrop": false,
-    "workbench.iconTheme": "vscode-icons",
-  "workbench.colorTheme": "Community Material Theme Ocean High Contrast",
+  "workbench.colorTheme": "GitHub Dark",
   "workbench.colorCustomizations": {
-    "editor.background": "#06080B",
-    "sideBar.background": "#06080B",
+    // "editor.background": "#000000",
+    // "sideBar.background": "#000000",
   },
   "editor.tokenColorCustomizations": {
     // "numbers": "#2247EB",
-    // "comments": "#a1a6a7",
+    "comments": "#a1a6a7",
     // "functions": "#0D7C28",
-    "strings": "#55efc4"
-  }
+    // "strings": "#55efc4"
+  },
+  "debug.javascript.usePreview": false,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "todo-tree.tree.showScanModeButton": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.iconTheme": "material-icon-theme",
+  "tabnine.experimentalAutoImports": true,
+  "diffEditor.maxComputationTime": 0,
+  "typescript.updateImportsOnFileMove.enabled": "always",
 }
