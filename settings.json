@@ -1,5 +1,5 @@
 {
-  "editor.fontSize": 21,
+  "editor.fontSize": 22,
   "files.autoSave": "off",
   "editor.formatOnSave": true,
   "[javascript]": {
@@ -14,10 +14,8 @@
   "debug.node.autoAttach": "on",
   // "php.validate.executablePath": "/opt/lampp/bin/php-7.1.28",
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
-  // "editor.fontFamily": "'Fira code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-  // "editor.fontLigatures": true,
+  "editor.fontFamily": "'Fira code Retina','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.tabSize": 2,
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
@@ -132,10 +130,91 @@
     // "sideBar.background": "#000000",
   },
   "editor.tokenColorCustomizations": {
-    // "numbers": "#2247EB",
+    "textMateRules": [
+      {
+        "scope": [
+          // the following elements will be in italic
+          //   (=Fira Code iScript)
+          // "comment",
+          "keyword.control.import.js", // import
+          "keyword.control.export.js", // export
+          "keyword.control.from.js", // from
+          // "constant", // String, Number, Boolean…, this, super
+          "storage.modifier", // static keyword
+          "storage.type.class", // class keyword
+          "entity.other.attribute-name", // html attributes
+          "fenced_code.block.language.markdown" // markdown language modifier
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          //following will be in italic (=FlottFlott)
+          "comment",
+          "entity.name.type.class", //class names
+          "keyword", //import, export, return…
+          "constant", //String, Number, Boolean…, this, super
+          "storage.modifier", //static keyword
+          "storage.type.class.js", //class keyword
+        ],
+        "settings": {
+          "fontStyle": "italic "
+        }
+      },
+      {
+        "scope": [
+          // all comment types
+          "comment",
+          // true, false, null
+          "constant.language",
+          // import, from, export, default, return, if, for, break, continue, try, catch, finally,
+          // throw, default, yield, await
+          "keyword.control",
+          // in, void, delete, instanceof
+          "keyword.operator.expression",
+          // debugger
+          "keyword.other",
+          // new
+          "keyword.operator.new",
+          // super, this, arguments
+          "variable.language",
+          // attributes in html, jsx, etc.
+          "entity.other.attribute-name",
+          // static, extends, async, private, public, implements
+          // constructor, const, let, var, enum, class, function, interface
+          // no explicit scopes for constructor, const, let, var
+          // also no explicit scope for function without the arrow
+          // therefore we enable all storage and explictly exclude the arrow in another scope
+          "storage",
+          // // no explicit scope for the eval keyword yet
+          // // can be targeted with the scope below, but scope is too broad
+          // "support.function",
+          // // no explicit scope for the package keyword yet
+          // // can be targeted with the scope below, but scope is too broad
+          // "variable.other.readwrite",
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          // function keyword does not have an explicit scope without the arrow
+          // therefore we explictly exclude the function arrow from being italicized
+          "storage.type.function.arrow",
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ],
+    "numbers": "#dd67d1",
     "comments": "#a1a6a7",
     // "functions": "#0D7C28",
-    // "strings": "#55efc4"
+    "strings": "#55efc4",
+    "keywords": "#dd67d1",
   },
   "debug.javascript.usePreview": false,
   "workbench.editorAssociations": {
@@ -144,8 +223,25 @@
   "todo-tree.tree.showScanModeButton": false,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "workbench.iconTheme": "material-icon-theme",
   "tabnine.experimentalAutoImports": true,
   "diffEditor.maxComputationTime": 0,
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "json.maxItemsComputed": 50000,
+  "settingsSync.ignoredSettings": [
+    "json.maxItemsComputed"
+  ],
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "bracketPairColorizer.depreciation-notice": false,
+  "workbench.iconTheme": "material-icon-theme",
 }
